@@ -6,7 +6,7 @@ font-family: 'Lexend Deca', sans-serif; */
 :root {
     --brightOrange: hsl(31, 77%, 52%);
     --darkCyan: hsl(184, 100%, 22%);
-    --varDarkCyan: hsl(179, 100%, 13%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
     --transparentWhite: hsla(0, 0%, 100%, 0.75);
     --veryLightGray: hsl(0, 0%, 95%);
 }
@@ -23,4 +23,111 @@ html {
 
 body {
     font-size: 15px;
+    margin: 0;
+    padding: 0;
+    background-color: var(--veryLightGray);
+}
+
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 65%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+h1 {
+    color: var(--veryLightGray);
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p {
+    color: var(--transparentWhite);
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 20px;
+    margin-bottom: 0;
+    line-height: 1.75;
+    
+}
+
+a {
+    background-color: var(--veryLightGray);
+    text-decoration: none;
+    padding: 12px 0;
+    border-radius: 25px;
+    text-align: center;
+    width: 125px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 70px;
+    border: 2px solid var(--veryLightGray);
+}
+
+a:active {
+    border: 2px solid var(--veryLightGray);
+    background: none;
+    color: var(--veryLightGray);
+}
+
+img {
+    width: 60px;
+    margin-bottom: 25px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 40px;
+}
+
+#sedans-section {
+    background-color: var(--brightOrange);
+    border-radius: 10px 0 0 10px;
+}
+
+#suvs-section {
+    background-color: var(--darkCyan);
+}
+
+#luxury-section {
+    background-color: var(--veryDarkCyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.bright-orange {
+    color: var(--brightOrange);
+}
+
+.dark-cyan {
+    color: var(--darkCyan);
+}
+
+.very-dark-cyan {
+    color: var(--veryDarkCyan);
+}
+
+@media screen and (max-width: 800px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    a {
+        margin-top: 20px;
+    }
+
+    #sedans-section {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #luxury-section {
+        border-radius: 0 0 10px 10px;
+    }
 }
